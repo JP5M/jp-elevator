@@ -105,7 +105,7 @@ CreateThread(function()
                             {
                                 name = 'use_elevator',
                                 icon = 'fa-solid fa-building',
-                                label = 'Aufzug benutzen',
+                                label = config.targetLabel,
                                 onSelect = function()
                                     openElevatorMenu(elevator)
                                 end,
@@ -122,7 +122,7 @@ CreateThread(function()
                         nearby = function(data) end,
                         options = {
                             {
-                                label = "Aufzug benutzen",
+                                label = config.targetLabel,
                                 icon = "fa-solid fa-building",  -- Example simple FA icon name
                                 onSelect = function(data) openElevatorMenu(elevator) end
                             }

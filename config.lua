@@ -2,6 +2,7 @@ config = {
     screenFade = true,  -- Set to false to disable the fade in / fade out option
     fadeDuration = 500, -- Set the time it takes for the fade to complete in ms
     interact = "sleepless_interact", -- Set the target system (ox_target or sleepless_interact)
+    targetLabel = "Use elevator",
 
     elevators = {
         {
