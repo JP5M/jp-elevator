@@ -2,6 +2,14 @@ local config = require('config')
 
 if #config.elevators == 0 then return end
 
+function PlayCustomSound(soundFile, volume)
+    SendNUIMessage({
+        type = "playSound",
+        sound = soundFile,
+        volume = volume or 1.0
+    })
+end
+
 local function parseVector(value)
     if type(value) == "string" then
         local x, y, z, w = value:match("vector4%(([^,]+), ([^,]+), ([^,]+), ([^)]+)%)")
@@ -71,6 +79,7 @@ RegisterNetEvent('jp_elevator:teleport', function(args)
     
     local isSafe, z = GetGroundZFor_3dCoord(parsedCoords.x, parsedCoords.y, parsedCoords.z, false)
     if isSafe then coordZ = z end
+    if config.sound then PlayCustomSound("web/sound.mp3", 0.9) end
     if config.screenFade then
         DoScreenFadeOut(config.fadeDuration)
         Citizen.Wait(config.fadeDuration)

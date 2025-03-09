@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.data.type === "playSound") {
+                let audio = new Audio(event.data.sound);
+                audio.volume = event.data.volume || 1.0;
+                audio.play();
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

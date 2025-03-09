@@ -1,5 +1,6 @@
 config = {
     screenFade = true,  -- Set to false to disable the fade in / fade out option
+    sound = true, -- Set to false to disable the sound
     fadeDuration = 500, -- Set the time it takes for the fade to complete in ms
     interact = "sleepless_interact", -- Set the target system (ox_target or sleepless_interact)
     targetLabel = "Use elevator",
@@ -10,10 +11,10 @@ config = {
             id = "medical_department",
             floors = {
                 {
-                    label = "Achte Etage",
-                    description = "Management & Konferenzräume",
-                    coords = vector4(-1829.3250, -336.9168, 84.0602, 143.8193),
-                    interaction = vector3(-1827.6355, -336.3678, 84.059) 
+                    label = "Achte Etage", -- The Button lable, in this case the floor name
+                    description = "Management & Konferenzräume", -- The Button Description, in this case "main entrance"
+                    coords = vector4(-1829.3250, -336.9168, 84.0602, 143.8193), -- The coords that the Player will be teleported to
+                    interaction = vector3(-1827.6355, -336.3678, 84.059) -- the coords at which the ox_target interaction will be at
                 },
                 {
                     label = "Zweite Etage",
@@ -28,10 +29,10 @@ config = {
                     interaction = vector3(-1835.0479, -336.8818, 53.7801) 
                 },
                 {
-                    label = "Erdgeschoss", -- The Button lable, in this case the floor name
-                    description = "Haupteingang", -- The Button Description, in this case "main entrance"
-                    coords = vector4(-1843.4381, -342.1761, 49.4526, 140.3787), -- The coords that the Player will be teleported to
-                    interaction = vector3(-1841.7339, -341.6407, 49.4529) -- the coords at which the ox_target interaction will be at
+                    label = "Erdgeschoss",
+                    description = "Haupteingang",
+                    coords = vector4(-1843.4381, -342.1761, 49.4526, 140.3787),
+                    interaction = vector3(-1841.7339, -341.6407, 49.4529)
                 },
             }
         },

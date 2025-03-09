@@ -14,6 +14,13 @@ client_scripts {
     'client.lua'
 }
 
+files {
+    'web/index.html',
+    'web/sound.mp3'
+}
+
+ui_page 'web/index.html'
+
 escrow_ignore {
     'config.lua',
     'client.lua',
