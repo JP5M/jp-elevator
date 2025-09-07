@@ -58,13 +58,4 @@ Example (from config.lua):
 
 - The web folder contains `index.html` and `sound.mp3` for UI and sound effects.
 
-## Credits
-
-- Script by JP5M
-- Built using [ox_lib](https://overextended.dev/ox_lib/)
-
-## License
-
-This script is provided as-is. For usage or modification permissions, contact JP5M.
-
 ---
